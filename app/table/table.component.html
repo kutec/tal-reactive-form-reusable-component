@@ -69,20 +69,8 @@
                      pInputText />
 						</ng-container>
 
-							<pre>
-               <!-- ControlName {{td?.formControlName}}
-              'Error:' {{ fg.get('td?.formControlName')?.errors?.required | json }}
-              'value:' {{ fg?.value | json }} -->
-            </pre>
-							<!-- <button (click)="catchErrors(td?.formControlName)">Get Errors</button> -->
-							<!-- <div style="background: red" aria-live="assertive" *ngIf="isRequired || isMinLength">
-								<small>{{isRequired | json}}</small>
-								<small>{{isMinLength | json}}</small>
-							</div> -->
 
-							<pre>req: {{fg?.get(td?.formControlName)?.errors?.required | json }}</pre>
-							<pre>minLength: {{fg?.get(td?.formControlName)?.errors?.minlength != null | json }}</pre>
-							<pre>valid: {{fg?.get(td?.formControlName)?.valid | json }}</pre>
+
 							<div style="background: red" *ngIf="(
                 (fg?.get(td?.formControlName)?.errors?.minlength) &&
                 !(fg?.get(td?.formControlName)?.valid) &&
@@ -97,6 +85,24 @@
             ">
 								required
 							</div>
+							<div style="background: orange" *ngIf="(
+                (fg?.get(td?.formControlName)?.errors?.email) &&
+                !(fg?.get(td?.formControlName)?.valid) &&
+                (fg?.get(td?.formControlName).dirty)
+              )">
+								email
+							</div>
+							<pre>req: {{fg?.get(td?.formControlName)?.errors?.required | json }}</pre>
+							<pre>email: {{fg?.get(td?.formControlName)?.errors?.email | json }}</pre>
+							<pre>minLength: {{fg?.get(td?.formControlName)?.errors?.minlength != null | json }}</pre>
+							<pre>valid: {{fg?.get(td?.formControlName)?.valid | json }}</pre>
+							<pre>dirty: {{fg?.get(td?.formControlName)?.dirty | json }}</pre>
+							<pre>4: {{(fg?.get(td?.formControlName)?.errors?.email) && !(fg?.get(td?.formControlName)?.valid) && (fg?.get(td?.formControlName).dirty) | json }}</pre>
+
+
+
+              
+
 						</ng-container>
 
 						<ng-container *ngIf="!(td?.isEditable)">

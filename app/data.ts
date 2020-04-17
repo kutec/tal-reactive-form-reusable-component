@@ -155,7 +155,7 @@ export const Data = {
         {
           "tableColumns": [
             {
-              "colTitle": "State"
+              "colTitle": "B 1"
             },
             {
               "formControlName": "B_state",
@@ -184,71 +184,7 @@ export const Data = {
         {
           "tableColumns": [
             {
-              "colTitle": "State income tax withholding is not supported for this payment."
-            }
-          ]
-        },
-        {
-          "tableColumns": [
-            {
-              "colTitle": "Withhold Nothing",
-              "isRadio": true,
-              "formControlName": "B_RADIO",
-              "selectedRadioAddress": "B_radio1",
-              "isRadioSelected": false,
-              "radioValue": "B_radio1"
-            },
-            {
-              "colTitle": "$0.00"
-            }
-          ]
-        },
-        {
-          "tableColumns": [
-            {
-              "colTitle": "Withhold Nothing(If no federal income tax withheld)",
-              "isRadio": true,
-              "formControlName": "B_RADIO",
-              "selectedRadioAddress": "B_radio1",
-              "isRadioSelected": false,
-              "radioValue": "B_radio2"
-            },
-            {
-              "colTitle": "$0.00"
-            }
-          ]
-        },
-        {
-          "tableColumns": [
-            {
-              "colTitle": "Withhold Default Amount",
-              "isRadio": true,
-              "formControlName": "B_RADIO",
-              "selectedRadioAddress": "B_radio1",
-              "isRadioSelected": false,
-              "radioValue": "B_radio3"
-            }
-          ]
-        },
-        {
-          "tableColumns": [
-            {
-              "colTitle": "Withhold Default Amount",
-              "isRadio": true,
-              "formControlName": "B_RADIO",
-              "selectedRadioAddress": "B_radio1",
-              "isRadioSelected": false,
-              "radioValue": "B_radio4"
-            },
-            {
-              "colTitle": "$8,999.99"
-            }
-          ]
-        },
-        {
-          "tableColumns": [
-            {
-              "colTitle": "Withhold This Amount (Minimum $1,999.99)(Minimums may apply.)",
+              "colTitle": "B 2",
               "isRadio": true,
               "formControlName": "B_RADIO",
               "selectedRadioAddress": "B_radio1",
@@ -266,7 +202,7 @@ export const Data = {
         {
           "tableColumns": [
             {
-              "colTitle": "Withhold Using These Choices:",
+              "colTitle": "B 3",
               "isRadio": true,
               "formControlName": "B_RADIO",
               "selectedRadioAddress": "B_radio1",
@@ -278,7 +214,7 @@ export const Data = {
         {
           "tableColumns": [
             {
-              "colTitle": "Marital Status",
+              "colTitle": "B 4",
               "isChildRow": true
             },
             {
@@ -304,7 +240,7 @@ export const Data = {
         {
           "tableColumns": [
             {
-              "colTitle": "Number of Allowances",
+              "colTitle": "B 5",
               "isChildRow": true
             },
             {
@@ -319,7 +255,7 @@ export const Data = {
         {
           "tableColumns": [
             {
-              "colTitle": "Additional Amount",
+              "colTitle": "B 6",
               "isChildRow": true
             },
             {
@@ -334,7 +270,7 @@ export const Data = {
         {
           "tableColumns": [
             {
-              "colTitle": "Additional Percent",
+              "colTitle": "B 7",
               "isChildRow": true
             },
             {
@@ -349,7 +285,7 @@ export const Data = {
         {
           "tableColumns": [
             {
-              "colTitle": "Withhold Using These Choices:",
+              "colTitle": "B 8",
               "isRadio": true,
               "formControlName": "B_RADIO",
               "selectedRadioAddress": "B_radio1",

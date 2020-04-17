@@ -52,7 +52,7 @@ export class TaxComponent implements OnInit, OnChanges {
             .selectedRadioAddress,
           Validators.required
         ),
-        B_withhold_this_amount: new FormControl(null, Validators.required),
+        B_withhold_this_amount: new FormControl(null, [Validators.required, Validators.email]),
         B_number_of_allowances: new FormControl('', Validators.required),
         B_additional_percent: new FormControl('', Validators.required),
         B_additional_amount: new FormControl('', Validators.required),

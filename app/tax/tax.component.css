@@ -1,0 +1,5 @@
+.row{ clear: both; width: 70%}
+.col{ width: 50%; float: left; }
+table:nth-child(1){
+  background: red;
+}
