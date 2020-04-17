@@ -1,0 +1,141 @@
+<!-- <al-loading-indicator *ngIf="showLoader" id="choosePlanStep" loadingType="pageLevel" [initialShow]="showLoader" loadingText="Loading..."></al-loading-indicator> -->
+
+<div class="al-gutter-row"
+     class="al-dbpmt-wthl-income-tax"
+     *ngIf="data">
+	<div id="al-dbpmt-wthl"
+	     class="al-gutter-col al-w5-8 al-720-w100 al-480-w100 al-320-w100">
+
+		<form [formGroup]="form"
+		      novalidate>
+
+			<!-- todo: validations -->
+			<!-- <al-content-box [hidden]="!showValidationErrorBox" aria-live="assertive" [contentBoxType]="'attention'"
+                [contentBoxBrand]="'brand-5'" [hasArrow]="false" [arrowPosition]="">
+                <div class="al-form-error-icon" id="al-error-message-box">
+                </div>
+            </al-content-box> -->
+
+			<fieldset>
+
+				<p>
+					<strong [innerHtml]="data?.transactionHeader"></strong>
+				</p>
+				<h1 [innerHtml]="data?.pageTitleItem"></h1>
+
+				<div *ngIf="data?.paymentDescriptionSection"
+				     class="al-margin-top-3x">
+					<h2 [innerHtml]="data?.paymentDescriptionSection?.tableTitle"></h2>
+					<!-- <app-table [tableRows]="data?.paymentDescriptionSection?.tableRows"
+					                         [isResponsive]="'true'">
+					</app-table> -->
+				</div>
+
+				<!-- tables - Estimated Income Tax Withholding -->
+				<section *ngIf="data?.estimatedIncomeTaxWthlSection"
+				         class="al-margin-top-3x">
+
+					<div class="al-gutter-row"
+					     *ngIf="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable || data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable || data?.estimatedIncomeTaxWthlSection?.usTerritoryIncomeTaxWthlTable || data?.estimatedIncomeTaxWthlSection?.provincialIncomeTaxWthlTable">
+
+						<!-- table - Federal Income Tax -->
+						<div class="al-gutter-col al-w50 al-720-w100 al-480-w100 al-320-w100"
+						     *ngIf="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable">
+
+                 <app-table [formGroup]="form" [value1]="value1"></app-table>  
+							
+
+							<app-table [formGroupName]="'fit'"
+							                         [sectionHeader]="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable?.sectionTitle"
+							                         [tableRows]="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable?.tableRows"
+							                         [selectedAddress]="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable?.selectedRadioAddress"
+													 [labelBottomSpace]="false"
+													 [colsWidth]="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable?.applyColsWidth"
+							                         [isResponsive]="false">
+							</app-table>
+
+						</div>
+
+						<!-- table - State Income Tax -->
+						<div class="al-gutter-col al-w50 al-720-w100 al-480-w100 al-320-w100"
+						     *ngIf="data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable">
+
+							<app-table [formGroupName]="'sit'"
+							                         [sectionHeader]="data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable?.sectionTitle"
+							                         [tableRows]="data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable?.tableRows"
+							                         [selectedAddress]="data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable?.selectedRadioAddress"
+													 [labelBottomSpace]="false"
+													 [colsWidth]="data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable?.applyColsWidth"
+							                         [isResponsive]="false">
+							</app-table>
+
+						</div>
+
+						<!-- table - U.S. Territory Income Tax -->
+						<div class="al-gutter-col al-w50 al-720-w100 al-480-w100 al-320-w100"
+						     *ngIf="data?.estimatedIncomeTaxWthlSection?.usTerritoryIncomeTaxWthlTable">
+
+							<!-- <app-table [tableRows]="data?.estimatedIncomeTaxWthlSection?.usTerritoryIncomeTaxWthlTable?.tableRows"
+							                         [selectedAddress]=""
+							                         [isResponsive]="false">
+							</app-table> -->
+
+						</div>
+
+						<!-- table - Provincial Income Tax -->
+						<div class="al-gutter-col al-w50 al-720-w100 al-480-w100 al-320-w100"
+						     *ngIf="data?.estimatedIncomeTaxWthlSection?.provincialIncomeTaxWthlTable">
+
+							<!-- <app-table [tableRows]="data?.estimatedIncomeTaxWthlSection?.provincialIncomeTaxWthlTable?.tableRows"
+							                         [selectedAddress]=""
+							                         [isResponsive]="false">
+							</app-table> -->
+
+						</div>
+
+					</div>
+
+				</section>
+
+
+				<!-- tables - Estimated Income Tax Withholding -->
+				<section *ngIf="data?.estimateWithholdingSection"
+				         class="al-margin-top-3x">
+
+					<!-- <app-table [tableRows]="data?.estimateWithholdingSection?.tableRows"
+					                         [isResponsive]="true">
+					</app-table> -->
+
+				</section>
+
+				<div *ngIf="data?.actionButtons"
+				     class="al-margin-top-3x">
+					<button pButton
+					        type="submit"
+					        [label]="data?.actionButtons?.changeButton"
+					        class="al-button-positive al-button-large">
+					</button>
+					<button (click)="cancelDialog.showDialog($event)"
+					        pButton
+					        type="button"
+					        [label]="data?.actionButtons?.cancelButton"
+					        class="al-button-neutral al-button-large">
+					</button>
+
+					
+				</div>
+
+			</fieldset>
+
+			<!-- // TODO: remove below <pre> tag after final form validations -->
+        <pre style="max-width: 25%; font-size: 11px; position: fixed; top: -11px; right: 15%; padding: 1.5%; border-radius: 30px 30px 0 0; box-shadow: 0px -7px 10px 11px #cbcbcb; background-color: white;">Error: {{ form?.errors | json }}</pre>
+			<pre style="max-width: 25%; font-size: 11px; position: fixed; top: -11px; right: 5%; padding: 1.5%; border-radius: 30px 30px 0 0; box-shadow: 0px -7px 10px 11px #cbcbcb; background-color: white;">Valid: {{ form.valid | json }}</pre>
+      <pre style="max-width: 25%; font-size: 11px; position: fixed; bottom: -11px; right: 5%; padding: 1.5%; border-radius: 30px 30px 0 0; box-shadow: 0px -7px 10px 11px #cbcbcb; background-color: white;">Values: {{ form.value | json }}</pre>
+		</form>
+
+	</div>
+
+	<!-- <div class="al-gutter-col al-w3-8 al-720-w100 al-480-w100 al-320-w100">
+		bbc
+	</div> -->
+</div>
