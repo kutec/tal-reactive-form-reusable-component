@@ -281,7 +281,7 @@
             {
               "colTitle": "Withhold Nothing",
               "isRadio": true,
-              "formControlName": "STATE_INCOME_TAX_RADIO",
+              "formControlName": "B_RADIO",
               "selectedRadioAddress": "SITR_radio1",
               "isRadioSelected": false,
               "radioValue": "SITR_radio1"
@@ -296,7 +296,7 @@
             {
               "colTitle": "Withhold Nothing(If no federal income tax withheld)",
               "isRadio": true,
-              "formControlName": "STATE_INCOME_TAX_RADIO",
+              "formControlName": "B_RADIO",
               "selectedRadioAddress": "SITR_radio1",
               "isRadioSelected": false,
               "radioValue": "SITR_radio2"
@@ -311,7 +311,7 @@
             {
               "colTitle": "Withhold Default Amount",
               "isRadio": true,
-              "formControlName": "STATE_INCOME_TAX_RADIO",
+              "formControlName": "B_RADIO",
               "selectedRadioAddress": "SITR_radio1",
               "isRadioSelected": false,
               "radioValue": "SITR_radio3"
@@ -323,7 +323,7 @@
             {
               "colTitle": "Withhold Default Amount",
               "isRadio": true,
-              "formControlName": "STATE_INCOME_TAX_RADIO",
+              "formControlName": "B_RADIO",
               "selectedRadioAddress": "SITR_radio1",
               "isRadioSelected": false,
               "radioValue": "SITR_radio4"
@@ -338,7 +338,7 @@
             {
               "colTitle": "Withhold This Amount (Minimum $1,999.99)(Minimums may apply.)",
               "isRadio": true,
-              "formControlName": "STATE_INCOME_TAX_RADIO",
+              "formControlName": "B_RADIO",
               "selectedRadioAddress": "SITR_radio1",
               "isRadioSelected": false,
               "radioValue": "SITR_radio5"
@@ -356,7 +356,7 @@
             {
               "colTitle": "Withhold Using These Choices:",
               "isRadio": true,
-              "formControlName": "STATE_INCOME_TAX_RADIO",
+              "formControlName": "B_RADIO",
               "selectedRadioAddress": "SITR_radio1",
               "isRadioSelected": false,
               "radioValue": "SITR_radio6"
@@ -438,7 +438,7 @@
             {
               "colTitle": "Withhold Using These Choices:",
               "isRadio": true,
-              "formControlName": "STATE_INCOME_TAX_RADIO",
+              "formControlName": "B_RADIO",
               "selectedRadioAddress": "SITR_radio1",
               "isRadioSelected": false,
               "radioValue": "SITR_radio7"

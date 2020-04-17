@@ -1,101 +1,23 @@
 export const Data = {
-  "transactionHeader": "Payment Withholding",
-  "pageTitleItem": "Model Your Income Tax Withholding",
-  "pageDescriptions": [
-    "You can enter different amounts below to determine how much to withhold from your payment, but you can't change income tax withholding on this site. To make changes, print this page for your reference. Then you can Print an Income Tax Withholding Form along with mailing instructions"
-  ],
-  "paymentDescriptionSection": {
-    "tableTitle": "Payment Description",
-    "tableRows": [
-      {
-        "tableColumns": [
-          {
-            "colTitle": "Gross Amount",
-            "isLeadIn": true
-          },
-          {
-            "colTitle": "$999,999.99",
-            "isLeadIn": true
-          }
-        ]
-      }
-    ]
-  },
   "estimatedIncomeTaxWthlSection": {
     "fedralIncomeTaxWthlTable": {
-      "sectionTitle": "Federal Income Tax Withholding",
-      "selectedRadioAddress": "FITR_radio4",
+      "sectionTitle": "Table 1",
+      "selectedRadioAddress": "A_radio4",
       "applyColsWidth": "true",
       "tableRows": [
         {
           "tableColumns": [
             {
-              "colTitle": "Taxable Income"
-            },
-            {
-              "colTitle": "$999,999.99"
-            }
-          ],
-          "isBrandingHighlighted4": true
-        },
-        {
-          "tableColumns": [
-            {
-              "colTitle": "Withhold Nothing",
+              "colTitle": "A 1",
               "isRadio": true,
-              "formControlName": "FEDERAL_INCOME_TAX_RADIO",
-              "selectedRadioAddress": "FITR_radio4",
-              "isRadioSelected": false,
-              "radioValue": "FITR_radio1"
-            },
-            {
-              "colTitle": "$0.00"
-            }
-          ]
-        },
-        {
-          "tableColumns": [
-            {
-              "colTitle": "Withhold Default Amount",
-              "isRadio": true,
-              "formControlName": "FEDERAL_INCOME_TAX_RADIO",
-              "selectedRadioAddress": "FITR_radio4",
-              "isRadioSelected": false,
-              "radioValue": "FITR_radio2"
-            },
-            {
-              "colTitle": "$8,999.99"
-            }
-          ]
-        },
-        {
-          "tableColumns": [
-            {
-              "colTitle": "Withhold Minimum Amount",
-              "isRadio": true,
-              "formControlName": "FEDERAL_INCOME_TAX_RADIO",
-              "selectedRadioAddress": "FITR_radio4",
+              "formControlName": "A_RADIO",
+              "selectedRadioAddress": "A_radio4",
               "isRadioSelected": true,
-              "radioValue": "FITR_radio3"
-            },
-            {
-              "colTitle": "$1,999.99"
-            }
-          ]
-        },
-        {
-          "tableColumns": [
-            {
-              "colTitle": "Withhold This Amount (Minimum $1,999.99)",
-              "isRadio": true,
-              "formControlName": "FEDERAL_INCOME_TAX_RADIO",
-              "selectedRadioAddress": "FITR_radio4",
-              "isRadioSelected": true,
-              "radioValue": "FITR_radio4"
+              "radioValue": "A_radio4"
             },
             {
               "colTitle": "",
-              "formControlName": "FITR_withold_this_amount",
+              "formControlName": "A_withold_this_amount",
               "isEditable": true,
               "isDollar": false
             }
@@ -104,16 +26,16 @@ export const Data = {
         {
           "tableColumns": [
             {
-              "colTitle": "Withhold This Percent (Minimum [3]%)",
+              "colTitle": "A 2",
               "isRadio": true,
-              "formControlName": "FEDERAL_INCOME_TAX_RADIO",
-              "selectedRadioAddress": "FITR_radio4",
+              "formControlName": "A_RADIO",
+              "selectedRadioAddress": "A_radio4",
               "isRadioSelected": false,
-              "radioValue": "FITR_radio5"
+              "radioValue": "A_radio5"
             },
             {
               "colTitle": "",
-              "formControlName": "FITR_withold_this_percent",
+              "formControlName": "A_withold_this_percent",
               "isEditable": true,
               "isPercent": true
             }
@@ -122,12 +44,12 @@ export const Data = {
         {
           "tableColumns": [
             {
-              "colTitle": "Withhold Nothing (Minimums may apply.)",
+              "colTitle": "A 3",
               "isRadio": true,
-              "formControlName": "FEDERAL_INCOME_TAX_RADIO",
-              "selectedRadioAddress": "FITR_radio4",
+              "formControlName": "A_RADIO",
+              "selectedRadioAddress": "A_radio4",
               "isRadioSelected": false,
-              "radioValue": "FITR_radio6"
+              "radioValue": "A_radio6"
             },
             {
               "colTitle": "$0.00"
@@ -137,12 +59,12 @@ export const Data = {
         {
           "tableColumns": [
             {
-              "colTitle": "Withhold Using These Choices:",
+              "colTitle": "A 4 Choices:",
               "isRadio": true,
-              "formControlName": "FEDERAL_INCOME_TAX_RADIO",
-              "selectedRadioAddress": "FITR_radio4",
+              "formControlName": "A_RADIO",
+              "selectedRadioAddress": "A_radio4",
               "isRadioSelected": false,
-              "radioValue": "FITR_radio7"
+              "radioValue": "A_radio7"
             }
           ]
         },
@@ -153,7 +75,7 @@ export const Data = {
               "isChildRow": true
             },
             {
-              "formControlName": "FITR_marital_status",
+              "formControlName": "A_marital_status",
               "selectedOption": "1",
               "dropDownItems": [
                 {
@@ -180,7 +102,7 @@ export const Data = {
             },
             {
               "colTitle": "",
-              "formControlName": "FITR_number_of_allowances",
+              "formControlName": "A_number_of_allowances",
               "isEditable": true,
               "isSmallInput": true,
               "isChildRow": true
@@ -195,7 +117,7 @@ export const Data = {
             },
             {
               "colTitle": "",
-              "formControlName": "FITR_additional_amount",
+              "formControlName": "A_additional_amount",
               "isEditable": true,
               "isDollar": true,
               "isChildRow": true
@@ -226,28 +148,17 @@ export const Data = {
       ]
     },
     "stateIncomeTaxWthlTable": {
-      "sectionTitle": "State Income Tax Withholding",
-      "selectedRadioAddress": "SITR_radio1",
+      "sectionTitle": "Table 2",
+      "selectedRadioAddress": "B_radio1",
       "applyColsWidth": "true",
       "tableRows": [
-        {
-          "tableColumns": [
-            {
-              "colTitle": "Taxable Income"
-            },
-            {
-              "colTitle": "$111,111.11"
-            }
-          ],
-          "isBrandingHighlighted4": true
-        },
         {
           "tableColumns": [
             {
               "colTitle": "State"
             },
             {
-              "formControlName": "SITR_state",
+              "formControlName": "B_state",
               "selectedOption": "1",
               "dropDownItems": [
                 {
@@ -282,10 +193,10 @@ export const Data = {
             {
               "colTitle": "Withhold Nothing",
               "isRadio": true,
-              "formControlName": "STATE_INCOME_TAX_RADIO",
-              "selectedRadioAddress": "SITR_radio1",
+              "formControlName": "B_RADIO",
+              "selectedRadioAddress": "B_radio1",
               "isRadioSelected": false,
-              "radioValue": "SITR_radio1"
+              "radioValue": "B_radio1"
             },
             {
               "colTitle": "$0.00"
@@ -297,10 +208,10 @@ export const Data = {
             {
               "colTitle": "Withhold Nothing(If no federal income tax withheld)",
               "isRadio": true,
-              "formControlName": "STATE_INCOME_TAX_RADIO",
-              "selectedRadioAddress": "SITR_radio1",
+              "formControlName": "B_RADIO",
+              "selectedRadioAddress": "B_radio1",
               "isRadioSelected": false,
-              "radioValue": "SITR_radio2"
+              "radioValue": "B_radio2"
             },
             {
               "colTitle": "$0.00"
@@ -312,10 +223,10 @@ export const Data = {
             {
               "colTitle": "Withhold Default Amount",
               "isRadio": true,
-              "formControlName": "STATE_INCOME_TAX_RADIO",
-              "selectedRadioAddress": "SITR_radio1",
+              "formControlName": "B_RADIO",
+              "selectedRadioAddress": "B_radio1",
               "isRadioSelected": false,
-              "radioValue": "SITR_radio3"
+              "radioValue": "B_radio3"
             }
           ]
         },
@@ -324,10 +235,10 @@ export const Data = {
             {
               "colTitle": "Withhold Default Amount",
               "isRadio": true,
-              "formControlName": "STATE_INCOME_TAX_RADIO",
-              "selectedRadioAddress": "SITR_radio1",
+              "formControlName": "B_RADIO",
+              "selectedRadioAddress": "B_radio1",
               "isRadioSelected": false,
-              "radioValue": "SITR_radio4"
+              "radioValue": "B_radio4"
             },
             {
               "colTitle": "$8,999.99"
@@ -339,14 +250,14 @@ export const Data = {
             {
               "colTitle": "Withhold This Amount (Minimum $1,999.99)(Minimums may apply.)",
               "isRadio": true,
-              "formControlName": "STATE_INCOME_TAX_RADIO",
-              "selectedRadioAddress": "SITR_radio1",
+              "formControlName": "B_RADIO",
+              "selectedRadioAddress": "B_radio1",
               "isRadioSelected": false,
-              "radioValue": "SITR_radio5"
+              "radioValue": "B_radio5"
             },
             {
               "colTitle": "",
-              "formControlName": "SITR_withhold_this_amount",
+              "formControlName": "B_withhold_this_amount",
               "isEditable": true,
               "isDollar": true
             }
@@ -357,10 +268,10 @@ export const Data = {
             {
               "colTitle": "Withhold Using These Choices:",
               "isRadio": true,
-              "formControlName": "STATE_INCOME_TAX_RADIO",
-              "selectedRadioAddress": "SITR_radio1",
+              "formControlName": "B_RADIO",
+              "selectedRadioAddress": "B_radio1",
               "isRadioSelected": false,
-              "radioValue": "SITR_radio6"
+              "radioValue": "B_radio6"
             }
           ]
         },
@@ -371,7 +282,7 @@ export const Data = {
               "isChildRow": true
             },
             {
-              "formControlName": "SITR_marital_status",
+              "formControlName": "B_marital_status",
               "selectedOption": "1",
               "dropDownItems": [
                 {
@@ -398,7 +309,7 @@ export const Data = {
             },
             {
               "colTitle": "[99]",
-              "formControlName": "SITR_number_of_allowances",
+              "formControlName": "B_number_of_allowances",
               "isEditable": true,
               "isSmallInput": true,
               "isChildRow": true
@@ -413,7 +324,7 @@ export const Data = {
             },
             {
               "colTitle": "",
-              "formControlName": "SITR_additional_amount",
+              "formControlName": "B_additional_amount",
               "isEditable": true,
               "isDollar": true,
               "isChildRow": true
@@ -428,7 +339,7 @@ export const Data = {
             },
             {
               "colTitle": "",
-              "formControlName": "SITR_additional_percent",
+              "formControlName": "B_additional_percent",
               "isEditable": true,
               "isPercent": true,
               "isChildRow": true
@@ -440,10 +351,10 @@ export const Data = {
             {
               "colTitle": "Withhold Using These Choices:",
               "isRadio": true,
-              "formControlName": "STATE_INCOME_TAX_RADIO",
-              "selectedRadioAddress": "SITR_radio1",
+              "formControlName": "B_RADIO",
+              "selectedRadioAddress": "B_radio1",
               "isRadioSelected": false,
-              "radioValue": "SITR_radio7"
+              "radioValue": "B_radio7"
             }
           ]
         },
@@ -454,7 +365,7 @@ export const Data = {
               "isChildRow": true
             },
             {
-              "formControlName": "SITR_percentage_of_your_taxable_benefit_amount",
+              "formControlName": "B_percentage_of_your_taxable_benefit_amount",
               "selectedOption": "20",
               "dropDownItems": [
                 {
@@ -481,7 +392,7 @@ export const Data = {
             },
             {
               "colTitle": "",
-              "formControlName": "SITR_additional_amount",
+              "formControlName": "B_additional_amount",
               "isEditable": true,
               "isDollar": true,
               "isChildRow": true

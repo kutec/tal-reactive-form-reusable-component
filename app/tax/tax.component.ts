@@ -35,30 +35,30 @@ export class TaxComponent implements OnInit, OnChanges {
     this.form = this.fb.group({
       // f1:  new FormControl(this.value1, [Validators.required, Validators.minLength(4)])
       fit: this.fb.group({
-        FEDERAL_INCOME_TAX_RADIO: new FormControl(
+        A_RADIO: new FormControl(
           this.data.estimatedIncomeTaxWthlSection.fedralIncomeTaxWthlTable
             .selectedRadioAddress,
           Validators.required
         ),
-        FITR_withold_this_amount: new FormControl('avfc', [Validators.required, Validators.minLength(3)]),
-        FITR_withold_this_percent: new FormControl('', [Validators.required, Validators.minLength(3)]),
-        FITR_additional_amount: new FormControl('', [Validators.required, Validators.minLength(3)]),
-        FITR_marital_status: new FormControl('', [Validators.required, Validators.minLength(3)]),
-        FITR_number_of_allowances: new FormControl('', [Validators.required, Validators.minLength(3)]),
+        A_withold_this_amount: new FormControl('avfc', [Validators.required, Validators.minLength(3)]),
+        A_withold_this_percent: new FormControl('', [Validators.required, Validators.minLength(3)]),
+        A_additional_amount: new FormControl('', [Validators.required, Validators.minLength(3)]),
+        A_marital_status: new FormControl('', [Validators.required, Validators.minLength(3)]),
+        A_number_of_allowances: new FormControl('', [Validators.required, Validators.minLength(3)]),
       }),
       sit: this.fb.group({
-        STATE_INCOME_TAX_RADIO: new FormControl(
+        B_RADIO: new FormControl(
           this.data.estimatedIncomeTaxWthlSection.stateIncomeTaxWthlTable
             .selectedRadioAddress,
           Validators.required
         ),
-        SITR_withhold_this_amount: new FormControl(null, Validators.required),
-        SITR_number_of_allowances: new FormControl('', Validators.required),
-        SITR_additional_percent: new FormControl('', Validators.required),
-        SITR_additional_amount: new FormControl('', Validators.required),
-        SITR_marital_status: new FormControl('', Validators.required),
-        SITR_state: new FormControl('', Validators.required),
-        SITR_percentage_of_your_taxable_benefit_amount: new FormControl('', Validators.required),
+        B_withhold_this_amount: new FormControl(null, Validators.required),
+        B_number_of_allowances: new FormControl('', Validators.required),
+        B_additional_percent: new FormControl('', Validators.required),
+        B_additional_amount: new FormControl('', Validators.required),
+        B_marital_status: new FormControl('', Validators.required),
+        B_state: new FormControl('', Validators.required),
+        B_percentage_of_your_taxable_benefit_amount: new FormControl('', Validators.required),
       })
     });
   }

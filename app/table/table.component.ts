@@ -30,7 +30,7 @@ export class TableComponent implements OnInit {
   }
 
   get fname() { 
-    return this.controlContainer.control.get('FITR_withold_this_amount');
+    return this.controlContainer.control.get('A_withold_this_amount');
   }
 
   catchErrors(event, controlName) {
