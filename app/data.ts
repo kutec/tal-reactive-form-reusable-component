@@ -334,28 +334,6 @@ export const Data = {
               "isChildRow": true
             }
           ]
-        },
-        {
-          "tableColumns": [
-            {
-              "colTitle": "Estimated State Amount Withheld",
-              "isLeadIn": true
-            },
-            {
-              "colTitle": "$777,777.77",
-              "isLeadIn": true
-            }
-          ],
-          "isBrandingHighlighted5": true
-        },
-        {
-          "tableColumns": [
-            {
-              "colTitle": "You can't model state withholding.",
-              "isLeadIn": true
-            }
-          ],
-          "isBrandingHighlighted5": true
         }
       ]
     }
