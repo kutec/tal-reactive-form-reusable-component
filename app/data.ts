@@ -13,7 +13,7 @@ export const Data = {
               "formControlName": "A_RADIO",
               "selectedRadioAddress": "A_radio4",
               "isRadioSelected": true,
-              "radioValue": "A_radio4"
+              "radioValue": ""
             },
             {
               "colTitle": "",

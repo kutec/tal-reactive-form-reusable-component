@@ -16,7 +16,7 @@ export class ValidationsComponent {
     for (let propertyName in this.controller.errors) {
       if (
         this.controller.errors.hasOwnProperty(propertyName) &&
-        this.controller.touched
+        !this.controller.pristine
       ) {
         return ValidationService.getValidatorErrorMessage(
           propertyName,

@@ -40,7 +40,7 @@ export class TaxComponent implements OnInit, OnChanges {
             .selectedRadioAddress,
           Validators.required
         ),
-        A_withold_this_amount: new FormControl('avfc', [Validators.required, Validators.minLength(3)]),
+        A_withold_this_amount: new FormControl('avfc', [Validators.required, Validators.minLength(4)]),
         A_withold_this_percent: new FormControl('', [Validators.required, Validators.minLength(3)]),
         A_additional_amount: new FormControl('', [Validators.required, Validators.minLength(3)]),
         A_marital_status: new FormControl('', [Validators.required, Validators.minLength(3)]),

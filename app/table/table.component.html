@@ -70,39 +70,6 @@
 
 							<app-validations [controller]="fg?.get(td?.formControlName)"></app-validations>
 
-
-							<!-- <div style="background: red" *ngIf="(
-                (fg?.get(td?.formControlName)?.errors?.minlength) &&
-                !(fg?.get(td?.formControlName)?.valid) &&
-                (fg?.get(td?.formControlName).dirty)
-              ) != null">
-								minLength
-							</div>
-							<div style="background: yellow" *ngIf="
-              (fg?.get(td?.formControlName)?.errors?.required) &&
-                !(fg?.get(td?.formControlName)?.valid) &&
-                (fg?.get(td?.formControlName).dirty)
-            ">
-								required
-							</div>
-							<div style="background: orange" *ngIf="(
-                (fg?.get(td?.formControlName)?.errors?.email) &&
-                !(fg?.get(td?.formControlName)?.valid) &&
-                (fg?.get(td?.formControlName).dirty)
-              )">
-								email
-							</div> -->
-							<pre>req: {{fg?.get(td?.formControlName)?.errors?.required | json }}</pre>
-							<pre>email: {{fg?.get(td?.formControlName)?.errors?.email | json }}</pre>
-							<pre>minLength: {{fg?.get(td?.formControlName)?.errors?.minlength != null | json }}</pre>
-							<pre>valid: {{fg?.get(td?.formControlName)?.valid | json }}</pre>
-							<pre>dirty: {{fg?.get(td?.formControlName)?.dirty | json }}</pre>
-							<pre>4: {{(fg?.get(td?.formControlName)?.errors?.email) && !(fg?.get(td?.formControlName)?.valid) && (fg?.get(td?.formControlName).dirty) | json }}</pre>
-
-
-
-
-
 						</ng-container>
 
 						<ng-container *ngIf="!(td?.isEditable)">
@@ -116,46 +83,47 @@
 								       [value]="td?.radioValue"
 								       [(ngModel)]="selectedAddress"
 								       [attr.ngModelOptions]="{standalone: true}">
-							  </div>
+									<app-validations [controller]="fg?.get(td?.formControlName)"></app-validations>
+								</div>
 
-									<div>
-										<div *ngIf="!td?.isRadio && !td?.isTooltip && !td?.isActionButton && !td?.isDropDown"
-											[ngClass]="{ 
+								<div>
+									<div *ngIf="!td?.isRadio && !td?.isTooltip && !td?.isActionButton && !td?.isDropDown"
+										[ngClass]="{ 
 										 'al-margin-bottom-neg1x': td?.isLeadIn,
 										 'al-padding-left-2x': td?.isChildRow
 									}">
-											<p [ngClass]="{
+										<p [ngClass]="{
 										'al-lead-in': td?.isLeadIn,
 										'brand-alert-1': td?.isNegAmt
 									}">
-												<span [innerHtml]="td?.colTitle"
+											<span [innerHtml]="td?.colTitle"
 										      [ngClass]="{ 'al-font-bold': td?.isStrong }"></span>
-											</p>
-										</div>
+										</p>
+									</div>
 
-										<div *ngIf="td?.isRadio && !td?.isTooltip"
-											[ngClass]="{ 'al-margin-bottom-1x': labelBottomSpace }">
-											<label [for]="td?.formControlName + '_' + i"
+									<div *ngIf="td?.isRadio && !td?.isTooltip"
+										[ngClass]="{ 'al-margin-bottom-1x': labelBottomSpace }">
+										<label [for]="td?.formControlName + '_' + i"
 									       [innerHtml]="td?.colTitle"></label>
-										</div>
+									</div>
 
-										<div *ngIf="td?.isTooltip && !td?.isRadio" class="al-margin-bottom-1x">
-											<a aria-haspopup="true" class="al-tooltip" href="javaScript:void(0);"
-												(mouseenter)="TooltipMouseOver_i.showPopOver($event)"
-												(mouseleave)="TooltipMouseOver_i.hidePopOver($event)"
-												[innerHtml]="td?.colTitle"></a>
+									<div *ngIf="td?.isTooltip && !td?.isRadio" class="al-margin-bottom-1x">
+										<a aria-haspopup="true" class="al-tooltip" href="javaScript:void(0);"
+											(mouseenter)="TooltipMouseOver_i.showPopOver($event)"
+											(mouseleave)="TooltipMouseOver_i.hidePopOver($event)"
+											[innerHtml]="td?.colTitle"></a>
 
-										</div>
+									</div>
 
-										<div *ngFor="let address of td?.addressItem" [innerHtml]="address"></div>
-										<ng-container *ngIf="td?.isActionButton">
-											<button pButton type="button"
+									<div *ngFor="let address of td?.addressItem" [innerHtml]="address"></div>
+									<ng-container *ngIf="td?.isActionButton">
+										<button pButton type="button"
 									        [label]="td?.colTitle"
 									        class="al-button-neutral" (click)="redirectNevUrl(td?.financialInstiLink)"></button>
-										</ng-container>
+									</ng-container>
 
-										<ng-container *ngIf="td?.isDropDown">
-											<select [(ngModel)]="td.selectedOption"
+									<ng-container *ngIf="td?.isDropDown">
+										<select [(ngModel)]="td.selectedOption"
 									        [formControlName]="td?.formControlName"
 									        [attr.ngModelOptions]="{standalone: true}"
 									        [id]="td?.formControlName">
@@ -165,9 +133,9 @@
 										        [innerHtml]="dropdown?.label">
 										</option>
 									</select>
-										</ng-container>
-									</div>
+									</ng-container>
 								</div>
+							</div>
 
 						</ng-container>
 

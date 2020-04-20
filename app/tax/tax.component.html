@@ -6,7 +6,7 @@
 			<fieldset>
 
 				<section *ngIf="data?.estimatedIncomeTaxWthlSection">
-
+          <h3>1st radio doesn't have any value: TRY to select it</h3>
 					<div class="row"
 						*ngIf="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable || data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable || data?.estimatedIncomeTaxWthlSection?.usTerritoryIncomeTaxWthlTable || data?.estimatedIncomeTaxWthlSection?.provincialIncomeTaxWthlTable">
 
@@ -16,11 +16,10 @@
 
 							<!-- <app-table [formGroup]="form" [value1]="value1"></app-table>   -->
 
-
+              
 							<app-table [formGroupName]="'fit'"
 								[sectionHeader]="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable?.sectionTitle"
 								[tableRows]="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable?.tableRows"
-								[selectedAddress]="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable?.selectedRadioAddress"
 								[labelBottomSpace]="false"
 								[colsWidth]="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable?.applyColsWidth"
 								[isResponsive]="false">
