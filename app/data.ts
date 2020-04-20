@@ -13,7 +13,7 @@ export const Data = {
               "formControlName": "A_RADIO",
               "selectedRadioAddress": "A_radio4",
               "isRadioSelected": true,
-              "radioValue": "A_radio1"
+              "radioValue": ""
             },
             {
               "colTitle": "",
@@ -189,7 +189,7 @@ export const Data = {
               "formControlName": "B_RADIO",
               "selectedRadioAddress": "B_radio1",
               "isRadioSelected": false,
-              "radioValue": "B_radio1"
+              "radioValue": ""
             },
             {
               "colTitle": "",
@@ -260,7 +260,7 @@ export const Data = {
             },
             {
               "colTitle": "",
-              "formControlName": "B_additional_amount",
+              "formControlName": "B_6",
               "isEditable": true,
               "isDollar": true,
               "isChildRow": true
@@ -275,7 +275,7 @@ export const Data = {
             },
             {
               "colTitle": "",
-              "formControlName": "B_additional_percent",
+              "formControlName": "B_7",
               "isEditable": true,
               "isPercent": true,
               "isChildRow": true
