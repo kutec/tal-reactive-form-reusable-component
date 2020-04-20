@@ -10,11 +10,13 @@ import { TaxComponent } from './tax/tax.component';
 import { DataService } from './rest.service';
 
 import {ButtonModule} from 'primeng/button';
+import { ValidationsComponent } from './validations/validations.component';
+import { ValidationService } from './validation.service';
 
 @NgModule({
   imports:      [ BrowserModule, ReactiveFormsModule, HttpClientModule, ButtonModule ],
-  declarations: [ AppComponent, HelloComponent, TableComponent, TaxComponent ],
+  declarations: [ AppComponent, HelloComponent, TableComponent, TaxComponent, ValidationsComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [DataService]
+  providers: [DataService, ValidationService]
 })
 export class AppModule { }

@@ -49,7 +49,6 @@
                      [formControlName]="td?.formControlName"
 							       [(ngModel)]="td.colTitle"
 							       [attr.ngModelOptions]="{standalone: true}"
-                     (blur)="catchErrors($event, td?.formControlName)"
                      pInputText />
 
 							<small *ngIf="td?.isPercent"
@@ -69,9 +68,10 @@
                      pInputText />
 						</ng-container>
 
+							<app-validations [controller]="fg?.get(td?.formControlName)"></app-validations>
 
 
-							<div style="background: red" *ngIf="(
+							<!-- <div style="background: red" *ngIf="(
                 (fg?.get(td?.formControlName)?.errors?.minlength) &&
                 !(fg?.get(td?.formControlName)?.valid) &&
                 (fg?.get(td?.formControlName).dirty)
@@ -91,7 +91,7 @@
                 (fg?.get(td?.formControlName).dirty)
               )">
 								email
-							</div>
+							</div> -->
 							<pre>req: {{fg?.get(td?.formControlName)?.errors?.required | json }}</pre>
 							<pre>email: {{fg?.get(td?.formControlName)?.errors?.email | json }}</pre>
 							<pre>minLength: {{fg?.get(td?.formControlName)?.errors?.minlength != null | json }}</pre>
@@ -101,7 +101,7 @@
 
 
 
-              
+
 
 						</ng-container>
 
@@ -116,7 +116,7 @@
 								       [value]="td?.radioValue"
 								       [(ngModel)]="selectedAddress"
 								       [attr.ngModelOptions]="{standalone: true}">
-							</div>
+							  </div>
 
 									<div>
 										<div *ngIf="!td?.isRadio && !td?.isTooltip && !td?.isActionButton && !td?.isDropDown"
