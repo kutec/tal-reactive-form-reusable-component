@@ -1,31 +1,16 @@
-<!-- <ng-container [formGroup]="controlContainer.control">
-  <button (click)="getErrors1()">Get Errors</button>
-  <input class="al-text-align-right" [formControlName]="'f1'"
-							       [(ngModel)]="value1"
-							       pInputText />
-
-                     
-</ng-container> -->
-
 <h3 *ngIf="sectionHeader">
 	<span [innerHtml]="sectionHeader"></span>
 </h3>
 
 <table *ngIf="tableRows" class="al-table" [ngClass]="{ 'al-table-responsive': isResponsive }">
 
-	<thead *ngIf="tableHeader">
-		<tr>
-			<th colspan="2">
-				<span [innerHtml]="tableHeader"></span>
-			</th>
-		</tr>
-	</thead>
-
 	<tbody *ngIf="tableRows">
+    <!-- row iteration -->
 		<tr *ngFor="let tr of tableRows; let i = index" [ngClass]="{
 			 'brand-highlight-4': tr?.isBrandingHighlighted4,
 			 'brand-highlight-5': tr?.isBrandingHighlighted5 }">
-
+       
+      <!-- col iteration -->
 			<td *ngFor="let td of tr?.tableColumns; let last = last; let first = first"
 				class="al-720-w100 al-480-w100 al-320-w100" [ngClass]="{ 
 					'al-text-align-right': (last && !(td?.isAlignLeft)),
