@@ -13,7 +13,7 @@ export const Data = {
               "formControlName": "A_RADIO",
               "selectedRadioAddress": "A_radio4",
               "isRadioSelected": true,
-              "radioValue": ""
+              "radioValue": "A_radio1"
             },
             {
               "colTitle": "",
@@ -31,7 +31,7 @@ export const Data = {
               "formControlName": "A_RADIO",
               "selectedRadioAddress": "A_radio4",
               "isRadioSelected": false,
-              "radioValue": "A_radio5"
+              "radioValue": "A_radio2"
             },
             {
               "colTitle": "",
@@ -49,7 +49,7 @@ export const Data = {
               "formControlName": "A_RADIO",
               "selectedRadioAddress": "A_radio4",
               "isRadioSelected": false,
-              "radioValue": "A_radio6"
+              "radioValue": "A_radio3"
             },
             {
               "colTitle": "$0.00"
@@ -64,7 +64,7 @@ export const Data = {
               "formControlName": "A_RADIO",
               "selectedRadioAddress": "A_radio4",
               "isRadioSelected": false,
-              "radioValue": "A_radio7"
+              "radioValue": "A_radio4"
             }
           ]
         },
@@ -189,7 +189,7 @@ export const Data = {
               "formControlName": "B_RADIO",
               "selectedRadioAddress": "B_radio1",
               "isRadioSelected": false,
-              "radioValue": "B_radio5"
+              "radioValue": "B_radio1"
             },
             {
               "colTitle": "",
@@ -207,7 +207,7 @@ export const Data = {
               "formControlName": "B_RADIO",
               "selectedRadioAddress": "B_radio1",
               "isRadioSelected": false,
-              "radioValue": "B_radio6"
+              "radioValue": "B_radio2"
             }
           ]
         },
@@ -290,7 +290,7 @@ export const Data = {
               "formControlName": "B_RADIO",
               "selectedRadioAddress": "B_radio1",
               "isRadioSelected": false,
-              "radioValue": "B_radio7"
+              "radioValue": "B_radio3"
             }
           ]
         },
