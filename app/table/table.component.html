@@ -53,7 +53,7 @@
                      pInputText />
 						</ng-container>
 
-							<app-validations [controller]="fg?.get(td?.formControlName)"></app-validations>
+							<!-- <app-validations [controller]="fg?.get(td?.formControlName)"></app-validations> -->
 
 						</ng-container>
 
@@ -68,7 +68,7 @@
 								       [value]="td?.radioValue"
 								       [(ngModel)]="selectedAddress"
 								       [attr.ngModelOptions]="{standalone: true}">
-									<app-validations [controller]="fg?.get(td?.formControlName)"></app-validations>
+									<!-- <app-validations [controller]="fg?.get(td?.formControlName)"></app-validations> -->
 								</div>
 
 								<div>
@@ -129,3 +129,5 @@
 		</tr>
 	</tbody>
 </table>
+
+<app-validations [controller]="fg?.get('A_RADIO')"></app-validations>

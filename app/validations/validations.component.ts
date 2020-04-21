@@ -13,18 +13,20 @@ export class ValidationsComponent {
   constructor() { }
 
   get errorMessage() {
-    for (let propertyName in this.controller.errors) {
-      if (
-        this.controller.errors.hasOwnProperty(propertyName) &&
-        !this.controller.pristine
-      ) {
-        return ValidationService.getValidatorErrorMessage(
-          propertyName,
-          this.controller.errors[propertyName]
-        );
+    if (this.controller) {
+      for (let propertyName in this.controller.errors) {
+        if (
+          this.controller.errors.hasOwnProperty(propertyName) &&
+          !this.controller.pristine
+        ) {
+          return ValidationService.getValidatorErrorMessage(
+            propertyName,
+            this.controller.errors[propertyName]
+          );
+        }
       }
+      return null;
     }
-    return null;
   }
 
 }
