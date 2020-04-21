@@ -35,7 +35,7 @@
 							       [(ngModel)]="td.colTitle"
 							       [attr.ngModelOptions]="{standalone: true}"
                      pInputText />
-
+              <app-validations [controller]="fg?.get(td?.formControlName)"></app-validations>
 							<small *ngIf="td?.isPercent"
 							       class="al-padding-left-1x">%</small>
 
@@ -51,9 +51,10 @@
 							       [(ngModel)]="td.colTitle"
 							       [attr.ngModelOptions]="{standalone: true}"
                      pInputText />
+                     <app-validations [controller]="fg?.get(td?.formControlName)"></app-validations>
 						</ng-container>
 
-							<!-- <app-validations [controller]="fg?.get(td?.formControlName)"></app-validations> -->
+							
 
 						</ng-container>
 
@@ -131,3 +132,4 @@
 </table>
 
 <app-validations [controller]="fg?.get('A_RADIO')"></app-validations>
+<app-validations [controller]="fg?.get('B_RADIO')"></app-validations>
