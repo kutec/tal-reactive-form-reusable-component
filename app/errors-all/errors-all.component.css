@@ -1,6 +1,7 @@
 div{
   background: yellow;
   padding: 10px 15px;
+  font-size: 12px;
 }
 .error-badge{
   background: #444;
