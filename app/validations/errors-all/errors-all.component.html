@@ -1,0 +1,7 @@
+<!-- <pre>{{ errors | json}}</pre> -->
+<div *ngIf="!form.pristine">
+	<p><strong>Error Aggregator</strong></p>
+	<ng-container *ngFor="let error of errors">
+		<p>{{error?.control_name}} is {{error?.error_name}}</p>
+	</ng-container>
+</div>

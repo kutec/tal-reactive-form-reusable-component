@@ -12,10 +12,11 @@ import { DataService } from './rest.service';
 import {ButtonModule} from 'primeng/button';
 import { ValidationsComponent } from './validations/validations.component';
 import { ValidationService } from './validation.service';
+import { ErrorsAllComponent } from './validations/errors-all/errors-all.component';
 
 @NgModule({
   imports:      [ BrowserModule, ReactiveFormsModule, HttpClientModule, ButtonModule ],
-  declarations: [ AppComponent, HelloComponent, TableComponent, TaxComponent, ValidationsComponent ],
+  declarations: [ AppComponent, HelloComponent, TableComponent, TaxComponent, ValidationsComponent, ErrorsAllComponent ],
   bootstrap:    [ AppComponent ],
   providers: [DataService, ValidationService]
 })

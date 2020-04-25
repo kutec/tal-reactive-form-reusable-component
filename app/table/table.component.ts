@@ -33,24 +33,24 @@ export class TableComponent implements OnInit {
     return this.controlContainer.control.get('A_withold_this_amount');
   }
 
-  catchErrors(event, controlName) {
+  // catchErrors(event, controlName) {
 
-    this.fcName = controlName;
-    // console.log(this.fg.get('f1').errors);
-    // console.log(event, ' ', controlName);
+  //   this.fcName = controlName;
+  //   // console.log(this.fg.get('f1').errors);
+  //   // console.log(event, ' ', controlName);
 
-    if (this.fg.get(controlName).errors != null) {
-      if (this.fg.get(controlName).errors.required) {
-        this.isRequired = true;
-      }
+  //   if (this.fg.get(controlName).errors != null) {
+  //     if (this.fg.get(controlName).errors.required) {
+  //       this.isRequired = true;
+  //     }
 
-      if (this.fg.get(controlName).errors.minLength != null) {
-        this.isMinLength = true;
-      }        
-      console.log(this.fg.get(controlName));
-    }
+  //     if (this.fg.get(controlName).errors.minLength != null) {
+  //       this.isMinLength = true;
+  //     }        
+  //     console.log(this.fg.get(controlName));
+  //   }
 
-  }
+  // }
 
 
 }

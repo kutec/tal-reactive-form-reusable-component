@@ -64,8 +64,8 @@ export class TaxComponent implements OnInit, OnChanges {
       })
     });
   }
-  
-  ngOnChanges(){
-    console.log(this.form);
+
+  showAllErrors(){
+    
   }
 }

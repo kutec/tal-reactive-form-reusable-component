@@ -2,13 +2,16 @@
 	<div>
 
 		<form [formGroup]="form" novalidate>
-
+      <!-- <p *ngfor="let error of form.errors" [innerHtml]="error"></p> -->
+      
 			<fieldset>
-
+        
 				<section *ngIf="data?.estimatedIncomeTaxWthlSection">
           <h3>1st radio doesn't have any value: TRY to select it</h3>
 					<div class="row"
 						*ngIf="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable || data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable || data?.estimatedIncomeTaxWthlSection?.usTerritoryIncomeTaxWthlTable || data?.estimatedIncomeTaxWthlSection?.provincialIncomeTaxWthlTable">
+
+            <app-errors-all [form]="form"></app-errors-all>
 
 						<!-- table - Federal Income Tax -->
 						<div class="col"
@@ -31,8 +34,7 @@
 						<!-- table - State Income Tax -->
 						<div class="col"
 							*ngIf="data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable">
-
-							<app-table [formGroupName]="'sit'"
+              <app-table [formGroupName]="'sit'"
 								[sectionHeader]="data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable?.sectionTitle"
 								[tableRows]="data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable?.tableRows"
 								[selectedAddress]="data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable?.selectedRadioAddress"
