@@ -2,6 +2,6 @@
 <div *ngIf="!form.pristine">
 	<p><strong>Error Aggregator</strong></p>
 	<ng-container *ngFor="let error of errors">
-		<p>{{error?.control_name}} is {{error?.error_name}}</p>
+		<p>{{error?.control_name}} is <span class="error-badge">{{error?.error_name}}</span></p>
 	</ng-container>
 </div>
