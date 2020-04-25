@@ -2,7 +2,7 @@ div{
   background: yellow;
   padding: 10px 15px;
 }
-error-badge{
+.error-badge{
   background: #444;
   color: #fff;
   padding:3px 7px;
