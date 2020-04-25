@@ -2,29 +2,28 @@
 	<div>
 
 		<form [formGroup]="form" novalidate>
-      <!-- <p *ngfor="let error of form.errors" [innerHtml]="error"></p> -->
-      
+			<!-- <p *ngfor="let error of form.errors" [innerHtml]="error"></p> -->
+
 			<fieldset>
-        
+
 				<section *ngIf="data?.estimatedIncomeTaxWthlSection">
-          <h3>1st radio doesn't have any value: TRY to select it</h3>
+					<h3>1st radio doesn't have any value: TRY to select it</h3>
 					<div class="row"
 						*ngIf="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable || data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable || data?.estimatedIncomeTaxWthlSection?.usTerritoryIncomeTaxWthlTable || data?.estimatedIncomeTaxWthlSection?.provincialIncomeTaxWthlTable">
 
-            <app-errors-all [form]="form"></app-errors-all>
+						<app-errors-all [form]="form"></app-errors-all>
 
 						<!-- table - Federal Income Tax -->
-						<div class="col"
-							*ngIf="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable">
+						<div class="col" *ngIf="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable">
 
 							<!-- <app-table [formGroup]="form" [value1]="value1"></app-table>   -->
 
-              
+
 							<app-table [formGroupName]="'fit'"
 								[sectionHeader]="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable?.sectionTitle"
 								[tableRows]="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable?.tableRows"
 								[labelBottomSpace]="false"
-                [selectedAddress]="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable?.selectedRadioAddress"
+								[selectedAddress]="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable?.selectedRadioAddress"
 								[colsWidth]="data?.estimatedIncomeTaxWthlSection?.fedralIncomeTaxWthlTable?.applyColsWidth"
 								[isResponsive]="false">
 							</app-table>
@@ -32,9 +31,8 @@
 						</div>
 
 						<!-- table - State Income Tax -->
-						<div class="col"
-							*ngIf="data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable">
-              <app-table [formGroupName]="'sit'"
+						<div class="col" *ngIf="data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable">
+							<app-table [formGroupName]="'sit'"
 								[sectionHeader]="data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable?.sectionTitle"
 								[tableRows]="data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable?.tableRows"
 								[selectedAddress]="data?.estimatedIncomeTaxWthlSection?.stateIncomeTaxWthlTable?.selectedRadioAddress"
@@ -77,9 +75,13 @@
 
 			</fieldset>
 
-			<!-- // TODO: remove below <pre> tag after final form validations -->
-			<pre
-				style="max-width: 25%; font-size: 11px; position: fixed; bottom: -11px; right: 5%; padding: 1.5%; border-radius: 30px 30px 0 0; box-shadow: 0px -7px 10px 11px #cbcbcb; background-color: white;">Values: {{ form.value | json }}</pre>
+			<div class="pre-div">
+				<p>Developed by <strong><a href="mailto:ku@kutec.co.in?subject=tal-reactive-form">Kushal Jayswal</a></strong></p>
+        <hr>
+				<pre>
+          Values: {{ form.value | json }}
+        </pre>
+			</div>
 		</form>
 
 	</div>
